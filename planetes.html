@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>planètes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Roboto:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logotype.png" alt="logoSpaceX" srcset="">
+        </div>
+        <div class="menu titre">
+            <a href="home.html">accueil</a>
+            <a href="">prochaine mission</a>
+        </div>
+    </header>
+    <div id="blockMenuInfo">
+        <nav class="navLeft">
+            <div class="menuInfo titre">
+                <img src="img/iconPlanete.png" alt="" srcset="">
+                <a>planètes</a>
+            </div>
+            <div class="menuInfo titre">
+                <img src="img/iconsoucoupe.png" alt="" srcset="">
+                <a>véhicules</a>
+            </div>
+            <div class="menuInfo titre">
+                <img src="img/iconalien.png" alt="" srcset="">
+                <a>personnes</a>
+            </div>
+        </nav>
+        <section class="blockPlaneteArticle titre">
+            <div class="listesAffichage">
+                <div id="headerListe">
+                    <h2>planètes</h2>
+                    <select name="filtres" id="filtres" onchange="selectFiltrePlanete()">
+                        <option value="">Par population</option>
+                        <option value="10000000">+ 10 millions</option>
+                        <option value="20000000">+ 20 millions</option>
+                        <option value="30000000">+ 30 millions</option>
+                    </select>
+                    <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="recherché... ">
+                </div>
+                <div id="sectionChoixPlanete">
+                    <div id="nomColonne">
+                        <h3>Nom</h3>
+                        <h3>Terrain</h3>
+                    </div>
+                    <div id="listePlanetes">
+                        <ul id=nom></ul>
+                        <ul id=terrain></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="affichageContenu">
+                <p id="noteAffichage">Selectionner le contenu à afficher!</p>
+                <div id="contenuInfoPlanete">
+                    <h2 id="nomPlaneteSelect"></h2>
+                    <div class="infoChiffrePlanete">
+                        <div class="infoPlanete">
+                            <h3>climat:</h3>
+                            <p id="climat"></p>
+                        </div>
+                        <div class="infoPlanete">
+                            <h3>Population:</h3>
+                            <p id="population"></p>
+                        </div>
+                        <div class="infoPlanete">
+                            <h3>Diamétre:</h3>
+                            <p id="diametre"></p>
+                        </div>
+                    </div>
+                    <button>En savoir plus</button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="js/scripPlanetes.js"></script>
+</body>
+
+</html>
